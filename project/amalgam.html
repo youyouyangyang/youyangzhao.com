@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Project Detail" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Amalgam | Youyang Zhao</title>
+    <style>
+        @font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}
+        @font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}
+        @font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}
+        body {
+            font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+            font-size: 14px;
+            color: #666;
+            background-color: #efefef;
+            margin: 0;
+        }
+        a { color: #000000; text-decoration: none; }
+        .container {
+            width: 80%;
+            max-width: 1080px;
+            margin: auto;
+            position: relative;
+        }
+        #main-header {
+            background-color: rgba(10,10,10,0);
+            width: 100%;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            z-index: 100; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100px; 
+        }
+        #top-navigation { width: auto; float: none; }
+        #top-menu { line-height: 0; margin: 0; padding: 0;}
+        #top-menu li {
+            display: inline-block;
+            font-size: 17px;
+            padding-right: 22px;
+            text-transform: uppercase;
+        }
+        #top-menu li:last-child { padding-right: 0; }
+        #top-menu a {
+            color: rgba(0,0,0,0.71);
+            display: block;
+            padding: 80px 0; 
+            font-weight: 700;
+        }
+        #logo-image {
+            position: absolute;
+            top: 20px; 
+            left: 5%; 
+            width: 50px; 
+            height: auto; 
+            z-index: 101; 
+        }
+        #main-footer { background-color: #efefef; height: 120px; display: flex; align-items: center; justify-content: center; }
+        #footer-bottom { background-color: rgba(0,0,0,0); padding: 0; color: #666; width: 100%; }
+        #footer-info { float: none; text-align: center; width: 100%; }
+
+        /* 头图样式 */
+        .hero-image {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-top: 0;
+            margin-bottom: 40px;
+            overflow: hidden;
+            max-height: 420px;
+            position: relative;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 18px 18px;
+            object-fit: cover;
+            max-height: 420px;
+        }
+
+        /* 作品内容混排样式 */
+        .project-content { margin-top:40px; margin-bottom:80px; }
+        .project-flex { display:flex; flex-wrap:wrap; gap:40px; }
+        .project-imgs { flex:1 1 350px; min-width:260px; }
+        .project-imgs img { width:100%; margin-bottom:18px; border-radius:6px; }
+        .project-desc { flex:2 1 380px; min-width:220px; }
+        .project-title { font-size:30px; margin-bottom:10px; }
+        .project-meta { font-size:16px; color:#999; margin-bottom:24px; }
+        .project-desc p { line-height:1.7; }
+        .project-desc blockquote {
+            margin:30px 0;color:#888;font-style:italic;border-left:4px solid #ddd;padding-left:16px;
+        }
+        @media (max-width: 980px) {
+            #main-header { height: 80px; }
+            #logo-image { width: 40px; top: 15px; left: 3%; }
+            #top-menu a { padding: 0; }
+            .project-content { margin-top:20px; }
+        }
+        @media (max-width: 767px) {
+            #main-header { height: 60px; }
+            #logo-image { width: 30px; top: 10px; left: 2%; }
+            .hero-image { max-height: 180px; }
+            .project-flex { flex-direction:column; gap:20px; }
+            .project-content { margin-top:10px; }
+        }
+		
+.img-caption {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 18px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+}
+    </style>
+</head>
+<body>
+    <div id="page-container">
+        <header id="main-header">
+            <a href="/"><img id="logo-image" src="../images/logo.png" alt="Logo" /></a>
+            <div id="top-navigation">
+                <nav id="top-menu-nav">
+                    <ul id="top-menu" class="nav">
+                        <li class="menu-item"><a href="../index.html#portfolio">WORKS</a></li>
+                        <li class="menu-item"><a href="../about.html">ABOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main-area">
+            <!-- 头图部分 -->
+            <div class="hero-image">
+                <img src="../images/amalgam/amalgam-01.jpg" alt="Head Image" />
+            </div>
+<div class="container project-content">
+    <!-- 段落1：标题与简介 -->
+    <div class="project-title">Amalgam</div>
+    <div class="project-meta">2025</div>
+    <p>
+        <b>Amalgam</b>（合和）探索金属与漆的结合，融合东方工艺与现代造型。银与漆的对比，表现材料的张力与和谐。
+    </p>
+    <!-- 图片1 -->
+    <div class="project-img-block">
+        <img src="../images/amalgam/amalgam-02.jpg" alt="Amalgam Detail 1" style="width:100%;margin-bottom:8px;border-radius:0;">
+        <div class="img-caption">作品细节：银与漆的结合表现</div>
+    </div>
+
+    <!-- 段落2 -->
+    <p>
+        作品采用传统的漆艺工法与银器锻造工艺，经过反复打磨与氧化处理，呈现丰富的表面层次与色彩变化。
+    </p>
+    <!-- 图片2 -->
+    <div class="project-img-block">
+        <img src="../images/amalgam/amalgam-01.jpg" alt="Amalgam Detail 2" style="width:100%;margin-bottom:8px;border-radius:0;">
+        <div class="img-caption">整体展示：Amalgam 合和</div>
+    </div>
+
+    <!-- 段落3：引用 -->
+    <blockquote>
+        “融合，不只是材料的拼接，更是文化与思想的对话。”
+    </blockquote>
+
+    <!-- 段落4：工艺与尺寸 -->
+    <p>
+        <b>工艺：</b> 手工锻打银、漆艺涂饰、手工氧化着色。<br>
+        <b>尺寸：</b> 约 120 x 80 x 30 mm
+    </p>
+    <div style="margin-top:30px;">
+        <a href="../index.html#portfolio" style="color:#333;text-decoration:underline;">← 返回作品集</a>
+    </div>
+</div>
+        <footer id="main-footer">
+            <div id="footer-bottom">
+                <div class="container clearfix">
+                    <div id="footer-info">© 2025 Youyang Zhao</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

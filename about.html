@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>About | Youyang Zhao</title>
+    <style>
+        @font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}
+        @font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}
+        @font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}
+        body {
+            font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+            font-size: 14px;
+            color: #666;
+            background-color: #efefef;
+            margin: 0;
+        }
+        a { color: #666; text-decoration: none; }
+        .container {
+            width: 80%;
+            max-width: 1080px;
+            margin: auto;
+            position: relative;
+        }
+        #main-header {
+            background-color: rgba(10,10,10,0);
+            width: 100%;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            z-index: 100; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100px; 
+        }
+        #top-navigation { width: auto; float: none; }
+        #top-menu { line-height: 0; margin: 0; padding: 0;}
+        #top-menu li {
+            display: inline-block;
+            font-size: 17px;
+            padding-right: 22px;
+            text-transform: uppercase;
+        }
+        #top-menu li:last-child { padding-right: 0; }
+        #top-menu a {
+            color: rgba(255,255,255,0.71);
+            display: block;
+            padding: 80px 0; 
+            font-weight: 700;
+        }
+        #logo-image {
+            position: absolute;
+            top: 20px; 
+            left: 5%; 
+            width: 50px; 
+            height: auto; 
+            z-index: 101; 
+        }
+        #main-footer { background-color: #efefef; height: 120px; display: flex; align-items: center; justify-content: center; }
+        #footer-bottom { background-color: rgba(0,0,0,0); padding: 0; color: #666; width: 100%; }
+        #footer-info { float: none; text-align: center; width: 100%; }
+
+        /* 头图样式 */
+        .hero-image {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-top: 0;
+            margin-bottom: 40px;
+            overflow: hidden;
+            max-height: 420px;
+            position: relative;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 18px 18px;
+            object-fit: cover;
+            max-height: 420px;
+        }
+
+        /* 作品内容混排样式 */
+        .project-content { margin-top:40px; margin-bottom:80px; }
+        .project-flex { display:flex; flex-wrap:wrap; gap:40px; }
+        .project-imgs { flex:1 1 350px; min-width:260px; }
+        .project-imgs img { width:100%; margin-bottom:18px; border-radius:6px; }
+        .project-desc { flex:2 1 380px; min-width:220px; }
+        .project-title { font-size:30px; margin-bottom:10px; }
+        .project-meta { font-size:16px; color:#999; margin-bottom:24px; }
+        .project-desc p { line-height:1.7; }
+        .project-desc blockquote {
+            margin:30px 0;color:#888;font-style:italic;border-left:4px solid #ddd;padding-left:16px;
+        }
+        @media (max-width: 980px) {
+            #main-header { height: 80px; }
+            #logo-image { width: 40px; top: 15px; left: 3%; }
+            #top-menu a { padding: 0; }
+            .project-content { margin-top:20px; }
+        }
+        @media (max-width: 767px) {
+            #main-header { height: 60px; }
+            #logo-image { width: 30px; top: 10px; left: 2%; }
+            .hero-image { max-height: 180px; }
+            .project-flex { flex-direction:column; gap:20px; }
+            .project-content { margin-top:10px; }
+        }
+		
+.img-caption {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 18px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+    </style>
+</head>
+<body>
+    <div id="page-container">
+        <header id="main-header">
+            <a href="/"><img id="logo-image" src="../images/logo-white.png" alt="Logo" /></a>
+            <div id="top-navigation">
+                <nav id="top-menu-nav">
+                    <ul id="top-menu" class="nav">
+                        <li class="menu-item"><a href="../index.html#portfolio">WORKS</a></li>
+                        <li class="menu-item"><a href="../about.html">ABOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main-area">
+            <!-- 头图部分 -->
+            <div class="hero-image">
+                <img src="../images/about/about-01.jpg" alt="Head Image" />
+            </div>
+<div class="container project-content">
+    <!-- 段落1：标题与简介 -->
+    <div class="project-title"><strong>Youyang Zhao 赵悠扬</strong></div>
+    <div class="project-meta">Silversmith, Artist</div>
+<!-- 联系方式 -->
+<h3>💬CONTACT</h3>
+<ul>
+    <li>zhaoyouyang(at)hotmail(dot)com
+    </li>
+    <li><a href="https://www.instagram.com/zhaoyouyang" target="_blank">Instagram @zhaoyouyang</a>
+    </li>
+</ul>
+<br>
+<!-- 英文 CV -->
+<h3>🎓EDUCATION</h3>
+<ul>
+    <li>
+        <strong>2022-2023</strong> – MA, Jewellery & Metal<br>
+        Royal College of Art, London, UK
+    </li>
+    <li>
+        <strong>2016-2022</strong> – BFA, Applied Arts<br>
+        Fu Jen Catholic University, New Taipei City, Taiwan<br>
+    </li>
+</ul>
+<br>
+<h3>🖼️EXHIBITIONS & COMPETITIONS</h3>
+<ul>
+    <li>
+        <strong>2025</strong> – ZIGZAG 移步异景<br>
+        Shenzhen, China
+    </li>
+    <li>
+        <strong>2025</strong> – Wells Art Contemporary<br>
+        Somerset, UK
+    </li>
+    <li>
+        <strong>2025</strong> – No One Has Taught Me This - London Design Festival<br>
+        London, UK
+    </li>
+    <li>
+        <strong>2025</strong> – Unanchored Crafting - London Craft Week<br>
+        London, UK
+    </li>
+    <li>
+        <strong>2024</strong> – Alloy - London Design Festival<br>
+        London, UK
+    </li>
+    <li>
+        <strong>2024</strong> – ITAMI International Craft Exhibition 'Shuki Shuhaidai', Selected<br>
+        Itami, Japan
+    </li>
+    <li>
+        <strong>2024</strong> – Talente – Masters of the Future, Selected<br>
+        Munich, Germany
+    </li>
+    <li>
+        <strong>2020</strong> – Young Pin Design Award, Craft Design, Nominated<br>
+        Taipei, Taiwan
+    </li>
+</ul>
+<br>
+    <!-- 中文 CV -->
+<h3>🎓教育背景</h3>
+<ul>
+    <li>
+        <strong>2022-2023</strong> – 文学硕士，珠宝与金属<br>
+        皇家艺术学院，伦敦，英国
+    </li>
+    <li>
+        <strong>2016-2022</strong> – 艺术学学士，应用美术<br>
+        天主教辅仁大学，新北，台湾<br>
+    </li>
+</ul>
+<br>
+<h3>🖼️展览与竞赛</h3>
+<ul>
+    <li>
+        <strong>2025</strong> – ZIGZAG 移步异景<br>
+        深圳，中国
+    </li>
+    <li>
+        <strong>2025</strong> – 威尔斯当代艺术展<br>
+        萨默塞特，英国
+    </li>
+    <li>
+        <strong>2025</strong> – No One Has Taught Me This - 伦敦设计节<br>
+        伦敦，英国
+    </li>
+    <li>
+        <strong>2025</strong> – Unanchored Crafting - 伦敦工艺周<br>
+        伦敦，英国
+    </li>
+    <li>
+        <strong>2024</strong> – Alloy - 伦敦设计节<br>
+        伦敦，英国
+    </li>
+    <li>
+        <strong>2024</strong> – 伊丹国际工艺展“酒器· 酒杯台”，入选<br>
+        伊丹，日本
+    </li>
+    <li>
+        <strong>2024</strong> – TALENTE─未来大师，入选<br>
+        慕尼黑，德国
+    </li>
+    <li>
+        <strong>2020</strong> – 金點新秀贊助特別獎 - 工藝設計類，提名<br>
+        台北，台湾
+    </li>
+</ul>
+
+    <div style="margin-top:30px;">
+        <a href="../" style="color:#333;text-decoration:underline;">← BACK</a>
+    </div>
+</div>
+        <footer id="main-footer">
+            <div id="footer-bottom">
+                <div class="container clearfix">
+                    <div id="footer-info">© 2025 Youyang Zhao</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
